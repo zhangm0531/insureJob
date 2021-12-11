@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://127.0.0.1:3306/mysql?serverTimezone=GMT%2B8&useSSL=FALSE
+    #username: fps
+    #password: fps
+    #url: jdbc:sqlserver://10.81.8.11:1433;DatabaseName=DB_INSURANCE
+    #driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    username: root
+    password: handsome
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+
+
+mybatis:
+  mapper-locations: classpath:com/sinopac/insurejob/**/*.xml
+  config-location: classpath:mybatis.xml
+  type-aliases-package: com.sinpac.insurejob
